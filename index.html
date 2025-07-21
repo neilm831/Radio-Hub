@@ -107,6 +107,19 @@ Desktop/
 </footer>
 
 </body>
+<video id="radioPlayer" controls autoplay></video>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script>
+  const video = document.getElementById('radioPlayer');
+  if (Hls.isSupported()) {
+    const hls = new Hls();
+    hls.loadSource('https://lstn.lv/bbcradio.m3u8?station=bbc_radio_two&bitrate=320000');
+    hls.attachMedia(video);
+  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = 'https://lstn.lv/bbcradio.m3u8?station=bbc_radio_two&bitrate=320000';
+  }
+</script>
 </html>
 radio-hub/
 
@@ -115,6 +128,7 @@ radio-hub/
 <div class="stream">
   <p><strong>BBC Radio 2</strong><br>
   <span>320kbps AAC</span><br>
+
   <a href="https://lstn.lv/bbcradio.m3u8?station=bbc_radio_two&bitrate=320000" target="_blank">▶ Play Stream</a></p>
 </div>
 
