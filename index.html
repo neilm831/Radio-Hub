@@ -107,47 +107,7 @@ Desktop/
 </footer>
 
 </body>
-<video id="radioPlayer" controls autoplay></video>
 
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<script>
-  const video = document.getElementById('radioPlayer');
-  if (Hls.isSupported()) {
-    const hls = new Hls();
-    hls.loadSource('https://lstn.lv/bbcradio.m3u8?station=bbc_radio_two&bitrate=320000');
-    hls.attachMedia(video);
-  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-    video.src = 'https://lstn.lv/bbcradio.m3u8?station=bbc_radio_two&bitrate=320000';
-  }
-
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<video id="video" controls></video>
-<script>
-  if (Hls.isSupported()) {
-    var video = document.getElementById('video');
-    var hls = new Hls();
-    hls.loadSource('https://lstn.lv/bbcradio.m3u8?station=bbc_radio_two&bitrate=320000');
-    hls.attachMedia(video);
-  }
-</script>
-</script>
-</html>
-radio-hub/
-
-<div id="streams">
-  <!-- Individual stream blocks will go here -->
-<div class="stream">
-  <p><strong>BBC Radio 2</strong><br>
-  <span>320kbps AAC</span><br>
-
-  <a href="https://lstn.lv/bbcradio.m3u8?station=bbc_radio_two&bitrate=320000" target="_blank">▶ Play Stream</a></p>
-</div>
-
-<div class="stream">
-  <p><strong>BBC 6 Music</strong><br>
-  <span>320kbps AAC</span><br>
-  <a href="https://lstn.lv/bbcradio.m3u8?station=bbc_6music&bitrate=320000" target="_blank">▶ Play Stream</a></p>
-</div>
 
 <div class="stream">
   <p><strong>Mi-Soul Radio</strong><br>
